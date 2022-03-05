@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="300.0" style="-fx-background-color: #3d3d3d; -fx-border-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="300.0">
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" text="SalesTech Scheduling System" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="Calibri Light" size="24.0" />
+                </font>
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </Label>
+        </HBox>
+        <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="300.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0">
+                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="User Name:" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Light" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" GridPane.rowIndex="1">
+                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Password:" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Light" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" GridPane.columnIndex="1">
+                <TextField fx:id="userName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="190.0" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="190.0" />
+            </HBox>
+        </GridPane>
+        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="300.0">
+            <padding>
+                <Insets top="4.0" />
+            </padding>
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onActionLogin" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #69d170;" text="Login" textAlignment="CENTER">
+                <font>
+                    <Font size="15.0" />
+                </font>
+                <HBox.margin>
+                    <Insets right="5.0" />
+                </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onActionExit" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #ff5c5c;" text="Exit" textAlignment="JUSTIFY">
+                <font>
+                    <Font size="15.0" />
+                </font>
+                <HBox.margin>
+                    <Insets left="5.0" />
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

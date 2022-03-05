@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="420.0" style="-fx-background-color: #3d3d3d; -fx-border-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegionReport">
+    <VBox fx:id="vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="420.0">
+        <HBox fx:id="hbox1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="40.0" prefWidth="420.0">
+            <Label fx:id="titleLabel" text="Region Report" textFill="WHITE">
+                <font>
+                    <Font size="22.0"/>
+                </font>
+            </Label>
+        </HBox>
+        <TableView fx:id="reportTBV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="region" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Region" />
+                <TableColumn fx:id="number" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Number of Appointments" />
+            </columns>
+        </TableView>
+        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="420.0">
+            <padding>
+                <Insets top="4.0" />
+            </padding>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onActionNavToMainPage" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #ff5c5c;" text="Back" textAlignment="JUSTIFY">
+                <font>
+                    <Font size="15.0" />
+                </font>
+                <HBox.margin>
+                    <Insets left="5.0" />
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

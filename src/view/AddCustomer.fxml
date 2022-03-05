@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0"
+            prefWidth="400.0" style="-fx-background-color: #3d3d3d; -fx-border-color: #ffffff;"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AddCustomer">
+    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0">
+        <Label alignment="CENTER" text="Add Customer" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+    </HBox>
+    <HBox alignment="CENTER" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0">
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                  prefHeight="350.0" prefWidth="380.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="135.0" prefWidth="135.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="245.0" prefWidth="245.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="35.0" minHeight="38.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+            <Label text="Customer ID" textFill="WHITE">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="Customer Type" textFill="WHITE" GridPane.rowIndex="1">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label fx:id="changingLabel" text="Account Number" textFill="WHITE" GridPane.rowIndex="2">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="Name" textFill="WHITE" GridPane.rowIndex="3">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="Address" textFill="WHITE" GridPane.rowIndex="4">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="Postal Code" textFill="WHITE" GridPane.rowIndex="5">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="Phone Number" textFill="WHITE" GridPane.rowIndex="6">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="Country" textFill="WHITE" GridPane.rowIndex="7">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <Label text="State / Province" textFill="WHITE" GridPane.rowIndex="8">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Label>
+            <TextField editable="false" style="-fx-background-color: #c9c9c9;"
+                       text="Automatically Generated - Disabled" GridPane.columnIndex="1">
+                <font>
+                    <Font name="System Italic" size="12.0"/>
+                </font>
+            </TextField>
+            <ComboBox fx:id="custType" onAction="#onActionCustTypeSelected" prefWidth="245.0"
+                      style="-fx-background-color: #c9c9c9;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <TextField fx:id="custExtra" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <TextField fx:id="custName" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <TextField fx:id="custAddress" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <TextField fx:id="custPostalCode" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <TextField fx:id="custPhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+            <ComboBox fx:id="custCountry" onAction="#onActionCountrySelected" prefWidth="245.0"
+                      style="-fx-background-color: #c9c9c9;" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+            <ComboBox fx:id="custStateProvince" prefWidth="245.0" style="-fx-background-color: #c9c9c9;"
+                      GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+        </GridPane>
+    </HBox>
+    <HBox alignment="TOP_RIGHT" layoutY="390.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="43.0" prefWidth="400.0">
+        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#onActionSaveCust" prefHeight="31.0" prefWidth="67.0"
+                style="-fx-background-color: #69d170;" text="Save">
+            <HBox.margin>
+                <Insets right="10.0"/>
+            </HBox.margin>
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#onActionNavToMainPage" prefHeight="31.0" prefWidth="67.0"
+                style="-fx-background-color: #ff5c5c;" text="Cancel">
+            <HBox.margin>
+                <Insets right="10.0"/>
+            </HBox.margin>
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+    </HBox>
+</AnchorPane>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
+            prefWidth="1372.0" style="-fx-background-color: #3d3d3d;" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddAppointment">
+    <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1372.0"
+          style="-fx-border-color: transparent white white white;">
+        <Label alignment="CENTER" text="Add Appointment" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+    </HBox>
+    <HBox layoutY="40.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="1372.0">
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="355.0" prefWidth="300.0"
+              style="-fx-border-color: transparent  white white white;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0">
+                <Label alignment="CENTER" text="1. Select Contact" textAlignment="JUSTIFY" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0">
+                <ComboBox fx:id="contact" prefWidth="280.0">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ComboBox>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <Label alignment="CENTER" text="2. Select Customer" textAlignment="JUSTIFY"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="265.0" prefWidth="300.0">
+                <TextField fx:id="custSearchTF" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#custSearch"
+                           prefHeight="25.0" prefWidth="280.0"
+                           promptText="Search by Customer ID or Customer Name">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </TextField>
+                <TableView fx:id="custTBView" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="280.0">
+                    <columns>
+                        <TableColumn fx:id="custIDTBV" maxWidth="100.0" minWidth="100.0" prefWidth="100.0"
+                                     text="Customer ID"/>
+                        <TableColumn fx:id="custNameTBV" maxWidth="180.0" minWidth="180.0" prefWidth="180.0"
+                                     text="Customer Name"/>
+                    </columns>
+                    <VBox.margin>
+                        <Insets top="15.0"/>
+                    </VBox.margin>
+                </TableView>
+            </VBox>
+        </VBox>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="355.0" prefWidth="350.0">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="355.0" prefWidth="350.0"
+                  style="-fx-border-color: transparent white white transparent;">
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="350.0">
+                    <Label alignment="CENTER" text="3. Customer Information" textAlignment="JUSTIFY"
+                           textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="315.0" prefWidth="350.0">
+                    <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                              minWidth="-Infinity" prefHeight="315.0" prefWidth="330.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="108.0"
+                                               prefWidth="108.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="222.0"
+                                               prefWidth="222.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                        <Label text="Customer ID" textFill="WHITE">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Name" textFill="WHITE" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Address" textFill="WHITE" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Postal Code" textFill="WHITE" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Phone Number" textFill="WHITE" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Country" textFill="WHITE" GridPane.rowIndex="5">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="State/Province" textFill="WHITE" GridPane.rowIndex="6">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="custID" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="custName" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="custAddress" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="custPostalCode" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="custPhoneNumber" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="custCountry" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="custStateProvince" editable="false" maxWidth="-Infinity"
+                                   minWidth="-Infinity" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                    </GridPane>
+                </HBox>
+            </VBox>
+        </VBox>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="355.0" prefWidth="327.0">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="355.0" prefWidth="327.0"
+                  style="-fx-border-color: transparent white white transparent;">
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="30.0" prefWidth="327.0">
+                    <Label alignment="CENTER" text="4. Appointment Details" textAlignment="JUSTIFY"
+                           textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="315.0" prefWidth="327.0">
+                    <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                              minWidth="-Infinity" prefHeight="315.0" prefWidth="307.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="85.0"
+                                               prefWidth="85.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="222.0"
+                                               prefWidth="222.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                        <Label text="Appt. ID" textFill="WHITE">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Title" textFill="WHITE" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Description" textFill="WHITE" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Location" textFill="WHITE" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Type" textFill="WHITE" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Start" textFill="WHITE" GridPane.rowIndex="5">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label text="End" textFill="WHITE" GridPane.rowIndex="6">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField editable="false" maxWidth="-Infinity" minWidth="-Infinity"
+                                   prefWidth="222.0" style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="appTitle" maxWidth="-Infinity" minWidth="-Infinity"
+                                   prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="appDescription" maxWidth="-Infinity" minWidth="-Infinity"
+                                   prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="appLocation" maxWidth="-Infinity" minWidth="-Infinity"
+                                   prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="appType" maxWidth="-Infinity" minWidth="-Infinity"
+                                   prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="startTimeslotTF" editable="false" maxHeight="-Infinity"
+                                   maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                   prefHeight="25.0" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="endTimeslotTF" editable="false" maxHeight="-Infinity"
+                                   maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                   prefHeight="25.0" prefWidth="222.0"
+                                   style="-fx-background-color: #d9d9d9;"
+                                   text="Automatically Populated" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Italic" size="12.0"/>
+                            </font>
+                        </TextField>
+                    </GridPane>
+                </HBox>
+            </VBox>
+        </VBox>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="355.0" prefWidth="395.0"
+              style="-fx-border-color: transparent white  white transparent;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="30.0" prefWidth="395.0">
+                <Label alignment="CENTER" text="5. Timeslots Selection" textAlignment="JUSTIFY"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="325.0" prefWidth="375.0">
+                <GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                          minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="375.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.5" minWidth="182.5"
+                                           prefWidth="182.5"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0"
+                                           prefWidth="10.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.5" minWidth="182.5"
+                                           prefWidth="182.5"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0"
+                                        vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="224.0" minHeight="224.0" prefHeight="224.0"
+                                        vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="51.0" minHeight="51.0" prefHeight="51.0"
+                                        vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity"
+                          minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0"
+                          prefWidth="182.5">
+                        <Label text="Start Date" textFill="WHITE">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets right="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="appStartDatePicker" maxHeight="-Infinity"
+                                    maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                    prefHeight="25.0" prefWidth="106.0"/>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity"
+                          minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="182.5"
+                          GridPane.columnIndex="2">
+                        <Label text="End Date" textFill="WHITE">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets right="17.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="appEndDatePicker" maxHeight="-Infinity"
+                                    maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                    prefHeight="25.0" prefWidth="106.0"/>
+                    </HBox>
+                    <TableView fx:id="startTimeslotTBV" maxHeight="-Infinity" maxWidth="-Infinity"
+                               minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0"
+                               prefWidth="182.5" GridPane.rowIndex="1">
+                        <columns>
+                            <TableColumn fx:id="startTimeCompanyCol" maxWidth="160.0" minWidth="160.0"
+                                         prefWidth="160.0" text="Company Time (EST)"/>
+                        </columns>
+                    </TableView>
+                    <TableView fx:id="endTimeslotTBV" maxHeight="-Infinity" maxWidth="-Infinity"
+                               minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0"
+                               prefWidth="182.5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <columns>
+                            <TableColumn fx:id="endTimeCompanyCol" maxWidth="160.0" minWidth="160.0"
+                                         prefWidth="160.0" text="Company Time (EST)"/>
+                        </columns>
+                    </TableView>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionAddStartTimeslot" prefHeight="31.0" prefWidth="182.5"
+                            style="-fx-background-color: #ffbf59;" text="Add Start Timeslot"
+                            GridPane.rowIndex="2">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Button>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionAddEndTimeslot" prefHeight="31.0" prefWidth="182.5"
+                            style="-fx-background-color: #ffbf59;" text="Add End Timeslot"
+                            GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Button>
+                </GridPane>
+            </HBox>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER" layoutY="395.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="55.0" prefWidth="1372.0"
+          style="-fx-border-color: transparent white white white;">
+        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#onActionSaveAppointment" prefHeight="31.0" prefWidth="67.0"
+                style="-fx-background-color: #69d170;" text="Save">
+            <HBox.margin>
+                <Insets right="5.0"/>
+            </HBox.margin>
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#onActionNavToMainPage" prefHeight="31.0" prefWidth="67.0"
+                style="-fx-background-color: #ff5c5c;" text="Cancel">
+            <HBox.margin>
+                <Insets left="5.0"/>
+            </HBox.margin>
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+    </HBox>
+</AnchorPane>

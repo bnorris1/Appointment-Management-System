@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0"
+            prefWidth="1280" style="-fx-background-color: #3d3d3d;" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0"
+          prefWidth="1280.0">
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="40.0" prefWidth="1280.0"
+              style="-fx-border-color: transparent white white white;">
+            <Label text="SalesTech Appointment Management System" textFill="WHITE">
+                <font>
+                    <Font size="22.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets/>
+                </HBox.margin>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="290.0" prefWidth="1280.0">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="290.0" prefWidth="1280.0"
+                  style="-fx-background-color: #3d3d3d; -fx-border-color: transparent white white white;">
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity"
+                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1260.0">
+                    <Label text="Customers" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets left="10.0" right="400.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="custSearchTF" maxHeight="-Infinity" maxWidth="-Infinity"
+                               minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#custSearch"
+                               prefHeight="25.0" prefWidth="300.0"
+                               promptText="Search by Customer ID or Customer Name">
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="200.0" prefWidth="1260.0">
+                    <TableView fx:id="custTBView" maxHeight="-Infinity" maxWidth="-Infinity"
+                               minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
+                               prefWidth="1260.0">
+                        <columns>
+                            <TableColumn fx:id="custIDTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" text="Customer ID"/>
+                            <TableColumn fx:id="custNameTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" text="Name"/>
+                            <TableColumn fx:id="custAddressTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" resizable="false" text="Address"/>
+                            <TableColumn fx:id="custPostalCodeTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" text="Postal Code"/>
+                            <TableColumn fx:id="custPhoneNumberTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" text="Phone Number"/>
+                            <TableColumn fx:id="custCountryTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" text="Country"/>
+                            <TableColumn fx:id="custStateProvinceTBV" maxWidth="180.0" minWidth="180.0"
+                                         prefWidth="180.0" text="State / Province"/>
+                        </columns>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </TableView>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity"
+                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1260.0">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionNavToAddCust" prefHeight="31.0" prefWidth="70.0"
+                            style="-fx-background-color: #4f8aff;" text="Add">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionNavToUpdateCust" prefHeight="31.0" prefWidth="70.0"
+                            style="-fx-background-color: #ffbf59;" text="Update">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionDeleteCust" prefHeight="31.0" prefWidth="70.0"
+                            style="-fx-background-color: #ff5c5c;" text="Delete">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </Button>
+                </HBox>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="290.0" prefWidth="1280.0">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="290.0" prefWidth="1280.0"
+                  style="-fx-background-color: #3d3d3d; -fx-border-color: transparent white white white;">
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity"
+                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1260.0">
+                    <Label text="Appointments" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets left="10.0" right="20.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <Label text="All" textAlignment="CENTER" textFill="WHITE" underline="true">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="5.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <RadioButton fx:id="allView" maxHeight="-Infinity" maxWidth="-Infinity"
+                                 minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                 prefWidth="16.0" selected="true" text="RadioButton">
+                        <HBox.margin>
+                            <Insets right="20.0"/>
+                        </HBox.margin>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="apptViewTG"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <Label text="Current Week" textAlignment="CENTER" textFill="WHITE" underline="true">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="5.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <RadioButton fx:id="weekView" maxHeight="-Infinity" maxWidth="-Infinity"
+                                 minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                 prefWidth="16.0" text="RadioButton" toggleGroup="$apptViewTG">
+                        <HBox.margin>
+                            <Insets right="20.0"/>
+                        </HBox.margin>
+                    </RadioButton>
+                    <Label text="Current Month" textAlignment="CENTER" textFill="WHITE"
+                           underline="true">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="5.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <RadioButton fx:id="monthView" maxHeight="-Infinity" maxWidth="-Infinity"
+                                 minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                 prefWidth="16.0" text="RadioButton" toggleGroup="$apptViewTG">
+                        <HBox.margin>
+                            <Insets right="20.0"/>
+                        </HBox.margin>
+                    </RadioButton>
+                </HBox>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="200.0" prefWidth="1260.0">
+                    <TableView fx:id="apptTBView" maxHeight="-Infinity" maxWidth="-Infinity"
+                               minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
+                               prefWidth="1260.0">
+                        <columns>
+                            <TableColumn fx:id="apptIDTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Appointment ID"/>
+                            <TableColumn fx:id="apptTitleTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Title"/>
+                            <TableColumn fx:id="apptDescriptionTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" resizable="false" text="Description"/>
+                            <TableColumn fx:id="apptLocationTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Location"/>
+                            <TableColumn fx:id="apptTypeTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Type"/>
+                            <TableColumn fx:id="apptStartDateTimeTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Start Date / Time"/>
+                            <TableColumn fx:id="apptEndDateTimeTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="End Date / Time"/>
+                            <TableColumn fx:id="apptCustNameTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Customer Name"/>
+                            <TableColumn fx:id="apptContactTBV" maxWidth="140.0" minWidth="140.0"
+                                         prefWidth="140.0" text="Contact Name"/>
+                        </columns>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </TableView>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity"
+                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1260.0">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionNavToAddAppt" prefHeight="31.0" prefWidth="70.0"
+                            style="-fx-background-color: #4f8aff;" text="Add">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionNavToUpdateAppt" prefHeight="31.0" prefWidth="70.0"
+                            style="-fx-background-color: #ffbf59;" text="Update">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                            onAction="#onActionDeleteAppt" prefHeight="31.0" prefWidth="70.0"
+                            style="-fx-background-color: #ff5c5c;" text="Delete">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </Button>
+                </HBox>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="51.0" prefWidth="1280.0"
+              style="-fx-border-color: transparent white white white;">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#onActionNavToApptReport" prefHeight="31.0"
+                    prefWidth="125.0" style="-fx-background-color: #ffbf59;" text="Appt Report">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#onActionNavToContactReport" prefHeight="31.0"
+                    prefWidth="125.0" style="-fx-background-color: #ffbf59;" text="Contact Report">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets left="10.0"/>
+                </HBox.margin>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#onActionNavToRegionReport" prefHeight="31.0"
+                    prefWidth="125.0" style="-fx-background-color: #ffbf59;" text="Region Report">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets left="10.0"/>
+                </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#onActionExit" prefHeight="31.0"
+                    prefWidth="70.0" style="-fx-background-color: #ff5c5c;" text="Exit" textAlignment="JUSTIFY">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets left="794.0" right="8.0"/>
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>
+
